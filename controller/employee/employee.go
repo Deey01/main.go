@@ -7,23 +7,29 @@ import (
 )
 
 //GET
-func GET(c *gin.Context) {
+func GetEmployee(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
     "message": "Employee GET Method!",
     })
 }
-func POST(c *gin.Context) {
+func PostEmployee(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
     "message": "Employee POST Method!",
     })
 }
-func PUT(c *gin.Context) {
+func PutEmployee(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
     "message": "Employee PUT Method!",
     })
 }
-func DELETE(c *gin.Context) {
+func DeleteEmployee(c *gin.Context) {
     c.JSON(http.StatusOK, gin.H{
     "message": "Employee DELETE Method!",
+    })
+}
+func GetEmployeebyID(c *gin.Context) {
+    id := c.Param("id")
+    c.JSON(http.StatusOK, gin.H{
+    "message": id,
     })
 }
